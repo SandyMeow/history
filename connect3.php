@@ -21,4 +21,5 @@ if ($mysqli->connect_errno>0){
 else {
 	echo"连接成功";
 }
+
 ?>
