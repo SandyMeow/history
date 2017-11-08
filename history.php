@@ -1,5 +1,5 @@
  <?php
-    include("connect3.php");
+    include("connectcloud.php");
     
     $table="LearningHistory";
     //设定查询语句

@@ -1,6 +1,6 @@
 <?php
 
-include("connect3.php");
+include("connectcloud.php");
 //接收数据
     class input{
 		function post($key){
@@ -35,7 +35,8 @@ if($result1){
 else echo"失败";
 
 $row1=$result1->fetch_array();
-echo $row1["class_name"];
+var_dump($row1);
+echo $row1['class_name'];
 
 
 ?>
@@ -123,11 +124,11 @@ echo $row1["class_name"];
             	<div class="am-panel am-panel-default">
                     <div class="am-panel-bd">
                     	<img class="am-img-responsive" src="default/timg.jpg" />
-                                        <h3><a href="#">篮球期末考试辅导</a></h3>
+                                        <h3><a href="#"><?php echo $row1['class_name']?></a></h3>
         <div>
-                            <span class="list-product-price-span">￥30.00</span>
-                            <span class="list-product-commission-span">佣金<br/>2.84</span>
+                            <span class="list-product-price-span"><?php echo $row['class_price']?></span>
                             <span class="list-product-sorce-span">积分<br/>4</span>
+                           
                         </div>
                         <hr data-am-widget="divider" style="" class="am-divider am-divider-default am-cf"/>
                         <ol class="am-avg-sm-3 product-list-share">
@@ -145,7 +146,6 @@ echo $row1["class_name"];
                         <h3><a href="#">排球期末考试辅导</a></h3>
                         <div>
                             <span class="list-product-price-span">￥30.00</span>
-                            <span class="list-product-commission-span">佣金<br/>2.84</span>
                             <span class="list-product-sorce-span">积分<br/>4</span>
                         </div>
                         <hr data-am-widget="divider" style="" class="am-divider am-divider-default am-cf"/>
