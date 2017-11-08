@@ -1,6 +1,6 @@
 <?php
 
-include("connectcloud.php");
+include("db.php");
 //接收数据
     class input{
 		function post($key){
